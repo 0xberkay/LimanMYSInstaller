@@ -117,10 +117,24 @@ function reset_admin_password() {
     log "Yeni parola oluşturuldu."
 }
 
+function logo() {
+    echo -e "${BLUE}"
+    cat << "EOF"
+    $$\       $$\
+    $$ |      \__|
+    $$ |      $$\ $$$$$$\$$$$\   $$$$$$\  $$$$$$$\
+    $$ |      $$ |$$  _$$  _$$\  \____$$\ $$  __$$\
+    $$ |      $$ |$$ / $$ / $$ | $$$$$$$ |$$ |  $$ |
+    $$ |      $$ |$$ | $$ | $$ |$$  __$$ |$$ |  $$ |
+    $$$$$$$$\ $$ |$$ | $$ | $$ |\$$$$$$$ |$$ |  $$ |
+    \________|\__|\__| \__| \__| \_______|\__|  \__|
+EOF
+echo -e "Liman MYS 2.0 Otomasyon Scripti\n${NC}"
+}
+
 # Yardım mesajını yazdırmak için işlev
 function print_help() {
-    echo -e "${BLUE}Liman MYS 2.0 Otomasyon Scripti"
-    echo "Kullanım: ./liman_installer.sh [kur|kaldir|administrator|reset|help|print_all_logs|check_services|reset_services|backup_database|restore_database|get_app_key]"
+    echo "Kullanım: ./liman_installer.sh [command] [options]"
     echo "  kur: Liman MYS 2.0'ı kurar."
     echo "  kaldir: Liman MYS 2.0'ı kaldırır."
     echo "  administrator: Admin kullanıcısı için yeni parola oluşturur."
@@ -197,17 +211,17 @@ function restore_database() {
     
     log "Veritabanı geri yükleme işlemi başlatılıyor..."
     local password=$(cat /liman/server/.env | grep DB_PASSWORDs | cut -d"=" -f2)
-
+    
     # Servisleri durdur
     for service in "${services[@]}"; do
         systemctl stop "$service.service"
     done
-
+    
     # Veritabanını sıfırla
     sudo psql -U postgres -c "drop database liman" --dbname=postgresql://liman:"$password"@localhost:5432/liman
-
+    
     log "Veritabanı sıfırlandı."
-
+    
     # Veritabanını geri yükle
     psql -f "$liman_db_backup" --dbname=postgresql://liman:"$password"@localhost:5432/liman
 }
@@ -246,6 +260,7 @@ case "$1" in
         install_liman
     ;;
     "help")
+        logo
         print_help
     ;;
     "print_all_logs")

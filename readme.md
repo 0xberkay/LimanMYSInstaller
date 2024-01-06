@@ -1,5 +1,9 @@
 # Liman MYS 2.0 Otomasyon Betiği
 
+## Zübeyir Berkay Küçük - 210707088
+
+## Açıklama
+
 Bu Bash betiği, Liman MYS 2.0'nin kurulumu, kaldırılması ve yönetimi için tasarlanmıştır. Kurulum, kaldırma, şifre sıfırlama, servis durumu kontrolü, veritabanı yedekleme ve geri yükleme, uygulama anahtarı alımı gibi özellikleri içermektedir.
 
 ## Önkoşullar
@@ -14,8 +18,8 @@ Betiği kullanmak için aşağıdaki adımları takip edin:
 1. Depoyu klonlayın:
 
     ```bash
-    git clone https://github.com/kullanici_adiniz/depoyunuz.git
-    cd depoyunuz
+    git clone https://github.com/0xberkay/AtaUni-Proje-Liman
+    cd AtaUni-Proje-Liman
     ```
 
 2. Betiğe çalıştırma izni verin:

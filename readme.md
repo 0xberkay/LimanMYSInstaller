@@ -2,6 +2,19 @@
 
 ## Zübeyir Berkay Küçük - 210707088
 
+```bash
+    $$\       $$\
+    $$ |      \__|
+    $$ |      $$\ $$$$$$\$$$$\   $$$$$$\  $$$$$$$\
+    $$ |      $$ |$$  _$$  _$$\  \____$$\ $$  __$$\
+    $$ |      $$ |$$ / $$ / $$ | $$$$$$$ |$$ |  $$ |
+    $$ |      $$ |$$ | $$ | $$ |$$  __$$ |$$ |  $$ |
+    $$$$$$$$\ $$ |$$ | $$ | $$ |\$$$$$$$ |$$ |  $$ |
+    \________|\__|\__| \__| \__| \_______|\__|  \__|
+    Liman MYS 2.0 Otomasyon Scripti
+
+```
+
 ## Açıklama
 
 Bu Bash betiği, Liman MYS 2.0'nin kurulumu, kaldırılması ve yönetimi için tasarlanmıştır. Kurulum, kaldırma, şifre sıfırlama, servis durumu kontrolü, veritabanı yedekleme ve geri yükleme, uygulama anahtarı alımı gibi özellikleri içermektedir.

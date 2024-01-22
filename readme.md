@@ -1,7 +1,5 @@
 # Liman MYS 2.0 Otomasyon Betiği
 
-## Zübeyir Berkay Küçük - 210707088
-
 ```bash
     $$\       $$\
     $$ |      \__|
